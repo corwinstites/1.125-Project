@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<div class="header">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <link href="style_tool.css" rel="stylesheet" />
+  <link href="https://wancharle.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <div class="sides"><a href="index.html" class="logo1">SeaSound Home</a><i class="em em-house"></i></div>
+  <div class="sides"> <a href="data.html" class="logo2">Check Out the Data!</a></div>
+  <div class="sides"> <a href="creators.html" class="logo3">Meet the Creators!</a></div>
+  <div class="sides"> <a href="learn.html" class="logo4">Learn About Ocean Sound!</a></div>
+  <div class="info">
+    <h4><p href="#category">Let's get started!</p></h4>
+    <h1>USE THE TOOL</h1>
+  </div> 
+</div>
+<section class="content">
+  <center><p>To get started, use the map below to pick the location that you're interested in. 
+  Remeber, our model is built from data taken around the US coast, so pick a location near the coast of the continental
+  US, Hawaii, Alaska, or a US territory for best results. Clicking on the map will automatically copy your selected location to your clipboard.
+  </p></center>
+  <p><br><br><br><br><br></p>
+  <div id="map" style="height:500px; width:800px; margin-left: auto; margin-right: auto;"></div>
+  <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB02WOCNOi27bQTGemhMgY3Xy4u2B8Pt0g&callback=initMap&v=weekly"
+      defer
+  ></script>
+  <script src="map.js"></script>
+  <p><br><br><br><br><br></p>
+  <center><p>Now that you have your selected latitude and longitude copied to your clipboard, take a look below. We have a Google Colab notebook which executes our SVP prediction model displayed in this window. Notice this window is using a preset example location. To use the tool yourself simply click on the “Open in Colab” button. Once in the notebook simply replace the value of “lat_lon” with the item copied to your clipboard. Select “Runtime” then “Run All.” After the code executes an image of your predicted SVP will automatically be saved to  your computer!</p></center>
+  <p><br><br><br><br><br></p>
+  <script src="https://gist.github.com/corwinstites/0be3046a9c7f50aa6ca9e7dc1ecf4ef9.js"></script>
+</html>
